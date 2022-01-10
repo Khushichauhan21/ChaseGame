@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+ background-color: #aaa;
+   overflow:hidden;
+   font-family: 'Raleway', sans-serif;
+  
+}
+
+.container{
+    background-image: url(bg.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    animation:containershake 10s linear infinite
+
+}
+@keyframes containershake {
+    0%{
+        transform: translateY(-5px);
+
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+    
+}
+
+.nobita{
+    background-image: url(nobita.png);
+    background-repeat: no-repeat;
+    height: 233px;
+    width:141px;
+    background-size:cover;
+    position: absolute;
+    bottom: 0;
+    left:52px;
+}
+.gian{
+    
+    background-image: url(gian.png);
+    width: 209px;
+    height: 264px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+ .animateNobita{
+    animation:nobitaJumpUp .6s linear ;
+}
+
+@keyframes nobitaJumpUp{
+    0%{
+        bottom:0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.animategian{
+animation:gianMove 5s linear infinite;
+}
+
+@keyframes gianMove {
+    0%{
+         left:100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+    
+}
+
+.gameover{
+    visibility: hidden;
+   font-weight: bold;
+   padding: 3rem;
+   background: linear-gradient(to right , #f0ed45 ,#eb6047);
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-size: 5rem;
+}
+
+#ScoreContainer{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    font-weight: bold;
+    font-size: 2rem;
+    background: linear-gradient(to right , #f0ed45 ,#eb6047);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid #eec146;
+    width: 150px;
+    
+}
+
